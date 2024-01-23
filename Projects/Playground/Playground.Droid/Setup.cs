@@ -5,10 +5,12 @@
 using System.Reflection;
 using Microsoft.Extensions.Logging;
 using MvvmCross.Binding.Bindings.Target.Construction;
+using MvvmCross.Converters;
 using MvvmCross.DroidX.RecyclerView;
 using MvvmCross.Platforms.Android.Core;
 using MvvmCross.Plugin;
 using Playground.Core;
+using Playground.Core.Converters;
 using Playground.Droid.Bindings;
 using Playground.Droid.Controls;
 using Serilog;
@@ -31,6 +33,11 @@ namespace Playground.Droid
                 (arg) => new BinaryEditTargetBinding(arg));
 
             base.FillTargetFactories(registry);
+        }
+
+        protected override void FillValueConverters(IMvxValueConverterRegistry registry)
+        {
+            registry.AddOrOverwrite("TextToColor", new TextToColorValueConverter());
         }
 
         public override void LoadPlugins(IMvxPluginManager pluginManager)

@@ -12,19 +12,14 @@ namespace Playground.Core.Converters
             {
                 case "green":
                     return Color.Green;
-                    break;
                 case "yellow":
                     return Color.Yellow;
-                    break;
                 case "brown":
                     return Color.Brown;
-                    break;
                 case "orange":
                     return Color.Orange;
-                    break;
                 default:
                     return Color.Black;
-                    break;
             }
         }
     }

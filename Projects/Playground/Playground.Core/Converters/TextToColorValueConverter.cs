@@ -10,13 +10,13 @@ namespace Playground.Core.Converters
         {
             switch (value.ToString())
             {
-                case "green":
+                case "I am green!":
                     return Color.Green;
-                case "yellow":
+                case "I am yellow!":
                     return Color.Yellow;
-                case "brown":
+                case "I am brown!":
                     return Color.Brown;
-                case "orange":
+                case "I am orange!":
                     return Color.Orange;
                 default:
                     return Color.Black;

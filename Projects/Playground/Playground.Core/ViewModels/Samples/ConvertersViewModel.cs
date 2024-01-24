@@ -43,7 +43,7 @@ public sealed class ConvertersViewModel : MvxViewModel
         ToggleVisibilityCommand = new MvxCommand(DoToggleVisibility);
         ToggleColorCommand = new MvxCommand(DoToggleColor);
 
-        _colorText = "green";
+        _colorText = "I am green!";
         _textColor = Color.Green;
         _colorPairs = new[]
         {
@@ -55,7 +55,7 @@ public sealed class ConvertersViewModel : MvxViewModel
     {
         var nextColorPair = _colorPairs[++_colorPairIndex % _colorPairs.Length];
 
-        ColorText = nextColorPair.Item1;
+        ColorText = $"I am {nextColorPair.Item1}!";
         TextColor = nextColorPair.Item2;
     }
 
